@@ -36,8 +36,8 @@ public class Drive extends Command {
   @Override
   public void execute() {
     double triggerDiff = -(controller.getRightTriggerAxis()-controller.getLeftTriggerAxis());
-    driveSubsystem.driveArcade(triggerDiff * DRIVE_SCALING, controller.getLeftX() * ROTATION_SCALING);  // Use this line for weird arcade drive.
-    // driveSubsystem.driveTank(controller.getLeftY() * DRIVE_SCALING, controller.getRightY() * DRIVE_SCALING);  // Use this line for tank drive.
+    // driveSubsystem.driveArcade(triggerDiff * DRIVE_SCALING, controller.getLeftX() * ROTATION_SCALING);  // Use this line for weird arcade drive.
+    driveSubsystem.driveTank(controller.getLeftY() * DRIVE_SCALING, controller.getRightY() * DRIVE_SCALING);  // Use this line for tank drive.
   }
 
   // Called once the command ends or is interrupted.
