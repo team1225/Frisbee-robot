@@ -13,7 +13,7 @@ import com.revrobotics.spark.config.SparkMaxConfig;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import static frc.robot.Constants.DriveConstants.*;
 
-
+// Alternate subsystem with finer control of each motor.
 
 public class CANFrisbeeShooterSubsystem extends SubsystemBase {
   private final SparkMax motorA;
