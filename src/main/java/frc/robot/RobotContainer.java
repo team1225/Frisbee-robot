@@ -57,6 +57,8 @@ public class RobotContainer {
     // value)
     driveSubsystem.setDefaultCommand(new Drive(driveSubsystem, driverController));
 
+    //This part is most likely where I messed up. A loop where if a is held down 
+    //It will run the shooter.
     driverController.a()
       .whileTrue(new ShooterCommands());
   }

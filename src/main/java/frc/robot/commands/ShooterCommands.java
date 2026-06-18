@@ -16,6 +16,7 @@ public class ShooterCommands extends Command {
   public ShooterCommands() {
     // Use addRequirements() here to declare subsystem dependencies.
     
+    //Normally there is more bug I don't see why we need it. 
     addRequirements(FrisbeeShooter);
   }
 

@@ -53,6 +53,8 @@ public class ShooterSubsystem extends SubsystemBase {
     // This method will be called once per scheduler run
   }
 
+
+  //My attempt at lowering "noise" on the can bus. Probably not needed.
   public void runShooter() {
     if (isMoving=false) {
       right1.set(Right_1_speed);
@@ -73,6 +75,7 @@ public class ShooterSubsystem extends SubsystemBase {
       left1.set(0);
       left2.set(0);
       left3.set(0);
+      isMoving=false;
     }
   }
 }
