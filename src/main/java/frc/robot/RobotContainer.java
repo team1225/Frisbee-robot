@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import static frc.robot.Constants.OperatorConstants.*;
 import frc.robot.commands.Drive;
+import frc.robot.commands.ShooterCommands;
 import frc.robot.subsystems.CANDriveSubsystem;
 
 /**
@@ -56,6 +57,8 @@ public class RobotContainer {
     // value)
     driveSubsystem.setDefaultCommand(new Drive(driveSubsystem, driverController));
 
+    driverController.a()
+      .whileTrue(new ShooterCommands());
   }
 
   /**

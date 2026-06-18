@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import com.revrobotics.spark.config.SparkBaseConfig.IdleMode;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide
  * numerical or boolean constants. This class should not be used for any other
@@ -24,7 +26,7 @@ public final class Constants {
 
     // Current limit for drivetrain motors. 60A is a reasonable maximum to reduce
     // likelihood of tripping breakers or damaging CIM motors
-    public static final int DRIVE_MOTOR_CURRENT_LIMIT = 39; //fuse 40A
+    public static final int DRIVE_MOTOR_CURRENT_LIMIT = 100; //fuse 40A
   }
 
   public static final class OperatorConstants {
@@ -37,5 +39,28 @@ public final class Constants {
     // help avoid turning too fast and beign difficult to control
     public static final double DRIVE_SCALING = .7;
     public static final double ROTATION_SCALING = .8;
+  }
+
+  public static final class ShooterConstants {
+    //So we can switch the ids easily.
+    public static final int Right_1_ID = 6;
+    public static final int Right_2_ID = 7;
+    public static final int Right_3_ID = 8;
+    public static final int Left_1_ID = 9;
+    public static final int Left_2_ID = 10;
+    public static final int Left_3_ID = 11;
+
+    //We probably want it in coast. May want brake.
+    public static final IdleMode SHOOTER_IDLE_MODE = IdleMode.kCoast;
+
+    public static final int SHOOTER_CURRENT_MAX = 100;
+
+    //So we can change individual motors
+    public static final double Right_1_speed = 1;
+    public static final double Right_2_speed = 1;
+    public static final double Right_3_speed = 1;
+    public static final double Left_1_speed = 1;
+    public static final double Left_2_speed = 1;
+    public static final double Left_3_speed = 1;
   }
 }
