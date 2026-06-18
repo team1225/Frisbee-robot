@@ -20,8 +20,8 @@ public class ShooterSubsystem extends SubsystemBase {
   private final SparkMax right2;
   private final SparkMax right3;
   private final SparkMax left1;
-  private final SparkMax left2;
-  private final SparkMax left3;
+  // private final SparkMax left2;
+  // private final SparkMax left3;
 
   private SparkMaxConfig genericSparkMaxConfig;
 
@@ -33,8 +33,8 @@ public class ShooterSubsystem extends SubsystemBase {
     right2 = new SparkMax(Right_2_ID, MotorType.kBrushless);
     right3 = new SparkMax(Right_3_ID, MotorType.kBrushless);
     left1 = new SparkMax(Left_1_ID, MotorType.kBrushless);
-    left2 = new SparkMax(Left_2_ID, MotorType.kBrushless);
-    left3 = new SparkMax(Left_3_ID, MotorType.kBrushless);
+    // left2 = new SparkMax(Left_2_ID, MotorType.kBrushless);
+    // left3 = new SparkMax(Left_3_ID, MotorType.kBrushless);
 
     genericSparkMaxConfig = new SparkMaxConfig();
 
@@ -44,8 +44,8 @@ public class ShooterSubsystem extends SubsystemBase {
     right2.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
     right3.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
     left1.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
-    left2.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
-    left3.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
+    // left2.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
+    // left3.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
   }
 
   @Override
@@ -61,8 +61,8 @@ public class ShooterSubsystem extends SubsystemBase {
       right2.set(Right_2_speed);
       right3.set(Right_3_speed);
       left1.set(Left_1_speed);
-      left2.set(Left_2_speed);
-      left3.set(Left_3_speed);
+      // left2.set(Left_2_speed);
+      // left3.set(Left_3_speed);
       isMoving=true;
     }
   }
@@ -73,8 +73,8 @@ public class ShooterSubsystem extends SubsystemBase {
       right2.set(0);
       right3.set(0);
       left1.set(0);
-      left2.set(0);
-      left3.set(0);
+      // left2.set(0);
+      // left3.set(0);
       isMoving=false;
     }
   }

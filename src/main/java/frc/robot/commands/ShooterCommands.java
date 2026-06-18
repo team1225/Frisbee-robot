@@ -5,19 +5,20 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
-
+// import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.subsystems.ShooterSubsystem;
 
 /* You should consider using the more terse Command factories API instead https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#defining-commands */
 public class ShooterCommands extends Command {
   /** Creates a new ShooterCommands. */
   private ShooterSubsystem FrisbeeShooter;
+  // private CommandXboxController controller;
 
-  public ShooterCommands() {
+  public ShooterCommands(ShooterSubsystem shootsystem/*,CommandXboxController driverController */) {
     // Use addRequirements() here to declare subsystem dependencies.
-    
-    //Normally there is more bug I don't see why we need it. 
-    addRequirements(FrisbeeShooter);
+    addRequirements(shootsystem);
+    FrisbeeShooter = shootsystem;
+    // controller = driverController;
   }
 
   // Called when the command is initially scheduled.

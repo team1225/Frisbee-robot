@@ -36,19 +36,19 @@ public final class Constants {
     public static final int OPERATOR_CONTROLLER_PORT = 1;
 
     // This value is multiplied by the joystick value when rotating the robot to
-    // help avoid turning too fast and beign difficult to control
+    // help avoid turning too fast and begin difficult to control
     public static final double DRIVE_SCALING = .7;
     public static final double ROTATION_SCALING = .8;
   }
 
   public static final class ShooterConstants {
     //So we can switch the ids easily.
-    public static final int Right_1_ID = 6;
-    public static final int Right_2_ID = 7;
-    public static final int Right_3_ID = 8;
-    public static final int Left_1_ID = 9;
-    public static final int Left_2_ID = 10;
-    public static final int Left_3_ID = 11;
+    public static final int Right_1_ID = 2;
+    public static final int Right_2_ID = 3;
+    public static final int Right_3_ID = 4;
+    public static final int Left_1_ID = 5;
+    // public static final int Left_2_ID = 10;
+    // public static final int Left_3_ID = 11;
 
     //We probably want it in coast. May want brake.
     public static final IdleMode SHOOTER_IDLE_MODE = IdleMode.kCoast;
@@ -60,7 +60,7 @@ public final class Constants {
     public static final double Right_2_speed = 1;
     public static final double Right_3_speed = 1;
     public static final double Left_1_speed = 1;
-    public static final double Left_2_speed = 1;
-    public static final double Left_3_speed = 1;
+    // public static final double Left_2_speed = 1;
+    // public static final double Left_3_speed = 1;
   }
 }

@@ -12,6 +12,7 @@ import static frc.robot.Constants.OperatorConstants.*;
 import frc.robot.commands.Drive;
 import frc.robot.commands.ShooterCommands;
 import frc.robot.subsystems.CANDriveSubsystem;
+import frc.robot.subsystems.ShooterSubsystem;
 
 /**
  * This class is where the bulk of the robot should be declared. Since
@@ -22,7 +23,9 @@ import frc.robot.subsystems.CANDriveSubsystem;
  */
 public class RobotContainer {
   // The robot's subsystems
-  private final CANDriveSubsystem driveSubsystem = new CANDriveSubsystem();
+  // private final CANDriveSubsystem driveSubsystem = new CANDriveSubsystem();
+
+  private final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
 
   // The driver's controller
   private final CommandXboxController driverController = new CommandXboxController(DRIVER_CONTROLLER_PORT);
@@ -55,15 +58,15 @@ public class RobotContainer {
     // controller. The Y axis of the controller is inverted so that pushing the
     // stick away from you (a negative value) drives the robot forwards (a positive
     // value)
-    driveSubsystem.setDefaultCommand(new Drive(driveSubsystem, driverController));
+    // driveSubsystem.setDefaultCommand(new Drive(driveSubsystem, driverController));
 
     //This part is most likely where I messed up. A loop where if a is held down 
     //It will run the shooter.
     driverController.a()
-      .whileTrue(new ShooterCommands());
+      .whileTrue(new ShooterCommands(shooterSubsystem));
   }
 
-  /**
+  /*
    * Use this to pass the autonomous command to the main {@link Robot} class.
    *
    * @return the command to run in autonomous
