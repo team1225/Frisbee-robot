@@ -56,26 +56,20 @@ public class ShooterSubsystem extends SubsystemBase {
 
   //My attempt at lowering "noise" on the can bus. Probably not needed.
   public void runShooter() {
-    if (isMoving=false) {
-      right1.set(Right_1_speed);
-      right2.set(Right_2_speed);
-      right3.set(Right_3_speed);
-      left1.set(Left_1_speed);
-      // left2.set(Left_2_speed);
-      // left3.set(Left_3_speed);
-      isMoving=true;
-    }
+    right1.set(Right_1_speed);
+    right2.set(Right_2_speed);
+    right3.set(Right_3_speed); 
+    left1.set(Left_1_speed);
+    // left2.set(Left_2_speed);
+    // left3.set(Left_3_speed);
   }
 
   public void stopShooter() {
-    if (isMoving=true) {
-      right1.set(0);
-      right2.set(0);
-      right3.set(0);
-      left1.set(0);
-      // left2.set(0);
-      // left3.set(0);
-      isMoving=false;
-    }
+    right1.set(0);
+    right2.set(0);
+    right3.set(0);
+    left1.set(0);
+    // left2.set(0);
+    // left3.set(0);
   }
 }
