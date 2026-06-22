@@ -29,12 +29,12 @@ public class ShooterSubsystem extends SubsystemBase {
   
   /** Creates a new Shooter. */
   public ShooterSubsystem() {
-    right1 = new SparkMax(Right_1_ID, MotorType.kBrushless);
-    right2 = new SparkMax(Right_2_ID, MotorType.kBrushless);
-    right3 = new SparkMax(Right_3_ID, MotorType.kBrushless);
-    left1 = new SparkMax(Left_1_ID, MotorType.kBrushless);
-    // left2 = new SparkMax(Left_2_ID, MotorType.kBrushless);
-    // left3 = new SparkMax(Left_3_ID, MotorType.kBrushless);
+    right1 = new SparkMax(RIGHT_1_ID, MotorType.kBrushless);
+    right2 = new SparkMax(RIGHT_2_ID, MotorType.kBrushless);
+    right3 = new SparkMax(RIGHT_3_ID, MotorType.kBrushless);
+    left1 = new SparkMax(LEFT_1_ID, MotorType.kBrushless);
+    // left2 = new SparkMax(LEFT_2_ID, MotorType.kBrushless);
+    // left3 = new SparkMax(LEFT_3_ID, MotorType.kBrushless);
 
     genericSparkMaxConfig = new SparkMaxConfig();
 
@@ -56,12 +56,12 @@ public class ShooterSubsystem extends SubsystemBase {
 
   //My attempt at lowering "noise" on the can bus. Probably not needed.
   public void runShooter() {
-    right1.set(Right_1_speed);
-    right2.set(Right_2_speed);
-    right3.set(Right_3_speed); 
-    left1.set(Left_1_speed);
-    // left2.set(Left_2_speed);
-    // left3.set(Left_3_speed);
+    right1.set(RIGHT_1_SPEED);
+    right2.set(RIGHT_2_SPEED);
+    right3.set(RIGHT_3_SPEED); 
+    left1.set(LEFT_1_SPEED);
+    // left2.set(LEFT_2_SPEED);
+    // left3.set(LEFT_3_SPEED);
   }
 
   public void stopShooter() {

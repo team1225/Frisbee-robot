@@ -43,12 +43,12 @@ public final class Constants {
 
   public static final class ShooterConstants {
     //So we can switch the ids easily.
-    public static final int Right_1_ID = 2;
-    public static final int Right_2_ID = 3;
-    public static final int Right_3_ID = 4;
-    public static final int Left_1_ID = 5;
-    // public static final int Left_2_ID = 10;
-    // public static final int Left_3_ID = 11;
+    public static final int RIGHT_1_ID = 2;
+    public static final int RIGHT_2_ID = 3;
+    public static final int RIGHT_3_ID = 4;
+    public static final int LEFT_1_ID = 5;
+    // public static final int LEFT_2_ID = 10;
+    // public static final int LEFT_3_ID = 11;
 
     //We probably want it in coast. May want brake.
     public static final IdleMode SHOOTER_IDLE_MODE = IdleMode.kCoast;
@@ -56,11 +56,11 @@ public final class Constants {
     public static final int SHOOTER_CURRENT_MAX = 100;
 
     //So we can change individual motors
-    public static final double Right_1_speed = 1;
-    public static final double Right_2_speed = 1;
-    public static final double Right_3_speed = 1;
-    public static final double Left_1_speed = 1;
-    // public static final double Left_2_speed = 1;
-    // public static final double Left_3_speed = 1;
+    public static final double RIGHT_1_SPEED = 1;
+    public static final double RIGHT_2_SPEED = 1;
+    public static final double RIGHT_3_SPEED = 1;
+    public static final double LEFT_1_SPEED = 1;
+    // public static final double LEFT_2_SPEED = 1;
+    // public static final double LEFT_3_SPEED = 1;
   }
 }
