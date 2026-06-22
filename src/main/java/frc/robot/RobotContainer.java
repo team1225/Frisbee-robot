@@ -32,7 +32,7 @@ public class RobotContainer {
 
   // The autonomous chooser
   private final SendableChooser<Command> autoChooser = new SendableChooser<>();
-
+  private final ShooterCommands shooterCommands = new ShooterCommands(shooterSubsystem);
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
    */
@@ -63,7 +63,7 @@ public class RobotContainer {
     //This part is most likely where I messed up. A loop where if a is held down 
     //It will run the shooter.
     driverController.a()
-      .whileTrue(new ShooterCommands(shooterSubsystem));
+      .whileTrue(shooterCommands);
   }
 
   /*

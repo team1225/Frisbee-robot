@@ -20,8 +20,8 @@ public class ShooterSubsystem extends SubsystemBase {
   private final SparkMax right2;
   private final SparkMax right3;
   private final SparkMax left1;
-  // private final SparkMax left2;
-  // private final SparkMax left3;
+  private final SparkMax left2;
+  private final SparkMax left3;
 
   private SparkMaxConfig genericSparkMaxConfig;
 
@@ -33,8 +33,8 @@ public class ShooterSubsystem extends SubsystemBase {
     right2 = new SparkMax(RIGHT_2_ID, MotorType.kBrushless);
     right3 = new SparkMax(RIGHT_3_ID, MotorType.kBrushless);
     left1 = new SparkMax(LEFT_1_ID, MotorType.kBrushless);
-    // left2 = new SparkMax(LEFT_2_ID, MotorType.kBrushless);
-    // left3 = new SparkMax(LEFT_3_ID, MotorType.kBrushless);
+    left2 = new SparkMax(LEFT_2_ID, MotorType.kBrushless);
+    left3 = new SparkMax(LEFT_3_ID, MotorType.kBrushless);
 
     genericSparkMaxConfig = new SparkMaxConfig();
 
@@ -43,9 +43,12 @@ public class ShooterSubsystem extends SubsystemBase {
     right1.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
     right2.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
     right3.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
+    
+    genericSparkMaxConfig.inverted(true);
+
     left1.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
-    // left2.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
-    // left3.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
+    left2.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
+    left3.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
   }
 
   @Override
@@ -60,8 +63,8 @@ public class ShooterSubsystem extends SubsystemBase {
     right2.set(RIGHT_2_SPEED);
     right3.set(RIGHT_3_SPEED); 
     left1.set(LEFT_1_SPEED);
-    // left2.set(LEFT_2_SPEED);
-    // left3.set(LEFT_3_SPEED);
+    left2.set(LEFT_2_SPEED);
+    left3.set(LEFT_3_SPEED);
   }
 
   public void stopShooter() {
@@ -69,7 +72,7 @@ public class ShooterSubsystem extends SubsystemBase {
     right2.set(0);
     right3.set(0);
     left1.set(0);
-    // left2.set(0);
-    // left3.set(0);
+    left2.set(0);
+    left3.set(0);
   }
 }
