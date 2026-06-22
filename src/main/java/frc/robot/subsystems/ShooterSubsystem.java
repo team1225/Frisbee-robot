@@ -38,13 +38,13 @@ public class ShooterSubsystem extends SubsystemBase {
 
     genericSparkMaxConfig = new SparkMaxConfig();
 
-    genericSparkMaxConfig.inverted(false).idleMode(SHOOTER_IDLE_MODE).smartCurrentLimit(SHOOTER_CURRENT_MAX);
+    genericSparkMaxConfig.inverted(true).idleMode(SHOOTER_IDLE_MODE).smartCurrentLimit(SHOOTER_CURRENT_MAX);
 
     right1.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
     right2.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
     right3.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
     
-    genericSparkMaxConfig.inverted(true);
+    genericSparkMaxConfig.inverted(false);
 
     left1.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
     left2.configure(genericSparkMaxConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
