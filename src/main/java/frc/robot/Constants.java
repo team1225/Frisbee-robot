@@ -56,11 +56,11 @@ public final class Constants {
     public static final int SHOOTER_CURRENT_MAX = 100;
 
     //So we can change individual motors
-    public static final double RIGHT_1_SPEED = 0.1;
-    public static final double RIGHT_2_SPEED = 0.1;
-    public static final double RIGHT_3_SPEED = 0.1;
-    public static final double LEFT_1_SPEED = 0.1;
-    public static final double LEFT_2_SPEED = 0.1;
-    public static final double LEFT_3_SPEED = 0.1;
+    public static final double RIGHT_1_SPEED = 1;
+    public static final double RIGHT_2_SPEED = 1;
+    public static final double RIGHT_3_SPEED = 1;
+    public static final double LEFT_1_SPEED = 0.7;
+    public static final double LEFT_2_SPEED = 0.7;
+    public static final double LEFT_3_SPEED = 0.7;
   }
 }
