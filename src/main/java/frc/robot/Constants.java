@@ -63,4 +63,13 @@ public final class Constants {
     // public static final double Left_2_speed = 1;
     // public static final double Left_3_speed = 1;
   }
+
+  public static final class PneumaticsConstants {
+    //Da hub
+    public static final int PneumaticHub = 9;
+
+    //Solonoids
+    public static final int LoaderForward = 0;
+    public static final int LoaderBackward = 1;
+  }
 }
