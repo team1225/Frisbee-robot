@@ -11,7 +11,6 @@ import static frc.robot.Constants.PneumaticsConstants.*;
 public abstract class PneumaticsSubsystem extends SubsystemBase {
     //Intializing the pneumatic hub
     PneumaticHub hub = new PneumaticHub(PneumaticHub);
-    
 
     //Intializing the loader
     DoubleSolenoid loaderDoubleSolenoid = new DoubleSolenoid(PneumaticsModuleType.REVPH, LoaderForward, LoaderBackward);

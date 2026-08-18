@@ -10,8 +10,10 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import static frc.robot.Constants.OperatorConstants.*;
 import frc.robot.commands.Drive;
+import frc.robot.commands.PneumaticCommands;
 import frc.robot.commands.ShooterCommands;
 import frc.robot.subsystems.CANDriveSubsystem;
+import frc.robot.subsystems.PneumaticsSubsystem;
 import frc.robot.subsystems.ShooterSubsystem;
 
 /**

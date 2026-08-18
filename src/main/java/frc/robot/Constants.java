@@ -65,14 +65,14 @@ public final class Constants {
   }
 
   public static final class PneumaticsConstants {
-    //Da hub and da bouys.
-
-    //Pneumatic and Compressor for standark speak.
+    //Da hub.
     public static final int PneumaticHub = 9;
-    public static final int Compressor = 10;
 
     //Solonoids
     public static final int LoaderForward = 0;
     public static final int LoaderBackward = 1;
+
+    //Miscellaneous
+    public static final int Slacktimer = 100;
   }
 }
