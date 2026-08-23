@@ -10,11 +10,15 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import static frc.robot.Constants.OperatorConstants.*;
 import frc.robot.commands.Drive;
-import frc.robot.commands.PneumaticCommands;
-import frc.robot.commands.ShooterCommands;
 import frc.robot.subsystems.CANDriveSubsystem;
-import frc.robot.subsystems.PneumaticsSubsystem;
+
+import frc.robot.commands.ShooterCommands;
 import frc.robot.subsystems.ShooterSubsystem;
+
+
+import frc.robot.subsystems.PneumaticsSubsystem;
+import frc.robot.commands.LoaderBackward;
+import frc.robot.commands.LoaderForward;
 
 /**
  * This class is where the bulk of the robot should be declared. Since
@@ -26,6 +30,9 @@ import frc.robot.subsystems.ShooterSubsystem;
 public class RobotContainer {
   // The robot's subsystems
   // private final CANDriveSubsystem driveSubsystem = new CANDriveSubsystem();
+
+  //I have no idea why it wants the {} but it won't work without them.
+  private final PneumaticsSubsystem pneumaticsSubsystem = new PneumaticsSubsystem(){};
 
   private final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
 
@@ -66,6 +73,13 @@ public class RobotContainer {
     //It will run the shooter.
     driverController.a()
       .whileTrue(new ShooterCommands(shooterSubsystem));
+    
+    //It's the exact same thing, why don't they work?
+    driverController.leftBumper()
+      .whileTrue(new LoaderBackward(pneumaticsSubsystem));
+
+    driverController.rightBumper()
+      .whileTrue(new LoaderForward(pneumaticsSubsystem));
   }
 
   /*

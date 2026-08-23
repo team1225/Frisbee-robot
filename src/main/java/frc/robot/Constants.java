@@ -71,8 +71,5 @@ public final class Constants {
     //Solonoids
     public static final int LoaderForward = 0;
     public static final int LoaderBackward = 1;
-
-    //Miscellaneous
-    public static final int Slacktimer = 100;
   }
 }
