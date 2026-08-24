@@ -3,7 +3,7 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.PneumaticsSubsystem;
 
-public abstract class LoaderForward extends Command {
+public class LoaderForward extends Command {
     private PneumaticsSubsystem loaderSubsystem;
     private boolean hasSent;
 
