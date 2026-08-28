@@ -53,14 +53,14 @@ public final class Constants {
     //We probably want it in coast. May want brake.
     public static final IdleMode SHOOTER_IDLE_MODE = IdleMode.kCoast;
 
-    public static final int SHOOTER_CURRENT_MAX = 100;
+    public static final int SHOOTER_CURRENT_MAX = 50;
 
     //So we can change individual motors
     public static final double RIGHT_1_SPEED = 1;
     public static final double RIGHT_2_SPEED = 1;
     public static final double RIGHT_3_SPEED = 1;
-    public static final double LEFT_1_SPEED = 0.7;
-    public static final double LEFT_2_SPEED = 0.7;
-    public static final double LEFT_3_SPEED = 0.7;
+    public static final double LEFT_1_SPEED = 0.3;
+    public static final double LEFT_2_SPEED = 0.5;
+    public static final double LEFT_3_SPEED = -0.1;
   }
 }
